@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="tiktok-developers-site-verification" content="MW31ttKhhyFY011QJD566XLF0lerw49A" />
+    <title>HjerteViralify - Viral Potansiyel Analizi</title>
+    <meta name="description"
+        content="TikTok trendlerini takip edin ve viral olma potansiyeli yüksek içerikleri keşfedin">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">✨</div>
+                    <h1 class="logo-text">HjerteViralify</h1>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Aktif Trendler</span>
+                        <span class="stat-value" id="activeTrends">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Viral Potansiyel</span>
+                        <span class="stat-value" id="viralCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Filters -->
+            <section class="filters-section">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">
+                        🌟 Tümü
+                    </button>
+                    <button class="filter-btn" data-filter="trending">
+                        🔥 Trend Olanlar
+                    </button>
+                    <button class="filter-btn" data-filter="viral">
+                        🚀 Viral Potansiyel
+                    </button>
+                    <button class="filter-btn" data-filter="rising">
+                        📈 Yükselenler
+                    </button>
+                    <button class="filter-btn" data-filter="favorites">
+                        ⭐ Favoriler
+                    </button>
+                </div>
+                <div class="sort-box">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="default">Varsayılan Sıralama</option>
+                        <option value="viral-desc">🚀 Viral Potansiyel (Yüksek → Düşük)</option>
+                        <option value="viral-asc">📊 Viral Potansiyel (Düşük → Yüksek)</option>
+                        <option value="views-desc">👁️ Görüntülenme (Yüksek → Düşük)</option>
+                        <option value="views-asc">👁️ Görüntülenme (Düşük → Yüksek)</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Hashtag veya içerik ara..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </section>
+
+            <!-- Trends Grid -->
+            <section class="trends-grid" id="trendsGrid">
+                <!-- Trends will be dynamically inserted here -->
+            </section>
+        </main>
+
+        <!-- Floating Action Button -->
+        <button class="fab" id="refreshBtn" title="Verileri Yenile">
+            <span class="fab-icon">🔄</span>
+        </button>
+
+        <!-- Footer -->
+        <footer
+            style="text-align: center; padding: 2rem; margin-top: 3rem; border-top: 1px solid rgba(102, 126, 234, 0.1);">
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                <a href="privacy.html"
+                    style="color: var(--accent-purple); text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
+                |
+                <a href="terms.html" style="color: var(--accent-purple); text-decoration: none; margin: 0 1rem;">Terms
+                    of Service</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">
+                © 2026 HjerteViralify. Not affiliated with TikTok.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Trend Detail Modal -->
+    <div class="modal" id="trendModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
